@@ -1,6 +1,6 @@
 require 'json'
 def get_first_name_of_season_winner(data, season)
-  data.each do |year, cast|
+  data[season].each do |year, cast|
     if year.to_s == season
       cast.each do |girl|
         if girl[:"status"] == "Winner"
